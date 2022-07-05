@@ -99,14 +99,14 @@ Andrew->>China: I am good thanks!
 | `git add [file-name.txt]` | Add a file to the staging area | Añade un archivo al area de preparación |
 | `git add .` | Add all new and changed files to the staging area | Añade todos los archivos al area de preparación |
 | `git add -A` | Add all files to the staging area. It's the same that add . | Añade todos los archivos al area de preparación. = add . |
-| `git add  - n [file-name.txt]` | Simulate add a file. | simula el agregado de un [archivo].
+| `git add - n [file-name.txt]` | Simulate adding a file | Simula el agregado de un [archivo] |
 | ​🌏​🌲​🌳​💻​`git commit`|  |  |
-| `git commit -m "[commit message]"` | Add cambios al stagging area to repository | Añade los archivos del área de stagging al repositorio |
-| `git commit -am "[commit message]"` |Add changed files and commit | Añande los cambios y hace commit |
-| `git commit -amend "[commit message]"` |Add changed files at the earlier commit | Añade los cambios al anterior commit  Si se escribe un mensaje este sobreescribe el anterior.|
+| `git commit -m "[commit message]"` | Add changes from stagging area to repository | Añade los archivos del área de stagging al repositorio |
+| `git commit -am "[commit message]"` |Add files from stagging area to repository and commit | Añande los cambios del stagging area al repositorio y hace commit |
+| `git commit -amend "[commit message]"` | Add changed files at the earlier commit | Añade los cambios al anterior commit. Si se escribe un mensaje este sobreescribe el anterior.|
 | ​🌏​🌲​🌳​💻​`git rm`|  |  |
-| `git rm -r [file-name.txt]` | Remove a file (or folder) | Elimina archivos o carpetas La diferencia entre esto y simplemente borrar el archivo directamente es que se guarda en git un registro de eliminación.|
-| `git rm --cached ` | Remove a file (or folder) del stagging area to working directory | Elimina archivos o carpetas del área de stagging al directorio de trabajo |
+| `git rm -r [file-name.txt]` | Remove a file (or folder) | Elimina archivos o carpetas La diferencia entre esto y simplemente borrar el archivo directamente es que se guarda en git un registro de eliminación. La diferencia entre esto y simplemente borrar el archivo directamente es que se guarda en git un registro de eliminación.|
+| `git rm --cached` | Remove a file (or folder) from stagging area to working directory | Elimina archivos o carpetas del área de stagging al directorio de trabajo |
 | `git rm -f ` | Remove a file (or folder) del stagging area and the working directory | Elimina archivos o carpetas del área de stagging y del directorio de trabajo |
 | ​🌏​🌲​🌳​💻​`git reset` |  |  |
 | `git reset --soft [sha1]` | Ammend the last commit | orrar todos los commits posteriores a [sha1]. Este comando resetea el HEAD al [sha1] mas no modifica ningún archivo. Quedan en el stagging para un commit posterior. |
