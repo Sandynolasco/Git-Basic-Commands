@@ -263,10 +263,29 @@ A list of commonly used Git and Terminal commands;
 | `git push [origin] [master]` | | Envia al repositorio local al remoto
 | `git push -tags` | |  Enviar los tags|
 | `git push --all origin` | | Push a todos los branch y tags|
+| `git push --u rama main` | | Push a todos los branch |
+
 | `rm -f -r ~/Projects/MyProject.git` | | Eliminará un repositorio Git de línea de comandos completo |
 
 ## Interesting Links / Enlaces Interesantes (Github)
 https://marklodato.github.io/visual-git-guide/index-es.html
 https://diego.com.es/ramas-y-uniones-en-git
+https://git-scm.com/docs/git-push
 
+## Errors / Errores (Github)
+Secuencia:
+git init
+git add file1.csv
+git commit -m "First commit"
+git remote add origin <Github url from Quick Setup page>
+git push -u origin main
+And I got the following errors:
+error: src refspec main does not match any
+error: failed to push some refs to <url>
+
+Solution A - if you want to name the branch master
+Run git push -u origin master instead of git push -u origin main
+
+Or Solution B - if you want to name the branch main
+Run git checkout -B main before git push -u origin main
 *Comandos para trabajar en Git y GitHub*
