@@ -264,7 +264,6 @@ A list of commonly used Git and Terminal commands;
 | `git push -tags` | |  Enviar los tags|
 | `git push --all origin` | | Push a todos los branch y tags|
 | `git push --u rama main` | | Push a todos los branch |
-
 | `rm -f -r ~/Projects/MyProject.git` | | Eliminará un repositorio Git de línea de comandos completo |
 
 ## Interesting Links / Enlaces Interesantes (Github)
