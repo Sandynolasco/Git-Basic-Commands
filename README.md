@@ -259,7 +259,7 @@ A list of commonly used Git and Terminal commands;
 | `git remote remove [nombre]` | | Remueve una conexión remota |
 | `git fetch [nombre] [branch]` | | Traer. Solo los trae pero no lo mezcla |
 | `git merge [origin/master] --allow-unrelated-histories` | | Hace un merge del fetch con el repositorio local |
-| `git pull [origin] [branch]` | | Hace un fetch mas merge, me trae lo que haya en la web |
+| `git pull [origin] [branch]` | | Hace git fetch + git merge, me trae lo que haya en la web |
 | `git push [origin] [master]` | | Envia al repositorio local al remoto
 | `git push -tags` | |  Enviar los tags|
 | `git push --all origin` | | Push a todos los branch y tags|
