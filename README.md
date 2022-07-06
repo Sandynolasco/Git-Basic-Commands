@@ -1,17 +1,5 @@
 # Git-Basic-Commands
 Práctica de Curso Profesional de Git y GitHub
-### Features
-
-- A list of commonly used Git and Terminal commands; 
-- Terminal Commands / Comandos de la Terminal;
-- Config Git / Configuracion de Git;
-- Config SSH Keys / Configuracion de Credenciales SSH;
-- Creating Projects / Creacion de proyectos;
-- Basic Snapshotting / Snapshooting Basico;
-- Branching & Merging / Ramas y fusionar;
-- Sharing & Updating Projects / Compartiendo y Repositorios Remotos
-- Inspection & Comparison / Inspeccion y Comparacion
-- Others / Otros
 
 # Editor.md
 
