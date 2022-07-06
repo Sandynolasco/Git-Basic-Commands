@@ -1,35 +1,34 @@
 # Git-Basic-Commands
 Práctica de Curso Profesional de Git y GitHub
 
+
 # Editor.md
 
 ![](https://pandao.github.io/editor.md/images/logos/editormd-logo-180x180.png)
 
+![](https://sandynolasco.github.io/Sandynolasco/imgall/blob/main/Begin.gif)
+
 ![](https://img.shields.io/github/stars/pandao/editor.md.svg) ![](https://img.shields.io/github/release/pandao/editor.md.svg) ![](https://img.shields.io/github/issues/pandao/editor.md.svg) ![](https://img.shields.io/bower/v/editor.md.svg)
 
 
-**Table of Contents**
+**Práctica de Curso Profesional de Git y GitHub**
 
-[TOC]# Git-Basic-Commands
-Práctica de Curso Profesional de Git y GitHub
-### Features
-
-- A list of commonly used Git and Terminal commands; 
-- Terminal Commands / Comandos de la Terminal;
-- Config Git / Configuracion de Git;
-- Config SSH Keys / Configuracion de Credenciales SSH;
-- Creating Projects / Creacion de proyectos;
-- Basic Snapshotting / Snapshooting Basico;
-- Branching & Merging / Ramas y fusionar;
+### Table of Contents
+A list of commonly used Git and Terminal commands;
+ 
+- Terminal Commands / Comandos de la Terminal
+- Config Git / Configuración de Git
+- Config SSH Keys / Configuración de Credenciales SSH
+- Creating Projects / Creación de proyectos
+- Basic Snapshotting / Snapshooting Básico
+- Branching & Merging / Ramas y Fusionar
 - Sharing & Updating Projects / Compartiendo y Repositorios Remotos
-- Inspection & Comparison / Inspeccion y Comparacion
+- Inspection & Comparison / Inspeccion y Comparación
 - Others / Otros
+- Collaborative Commands / Comandos Colaborativos
+- Repositorios Remotos (Github)
+- Interesting Links / Enlaces Interesantes (Github)
 
-# Editor.md
-
-![](https://pandao.github.io/editor.md/images/logos/editormd-logo-180x180.png)
-
-![](https://img.shields.io/github/stars/pandao/editor.md.svg) ![](https://img.shields.io/github/release/pandao/editor.md.svg) ![](https://img.shields.io/github/issues/pandao/editor.md.svg) ![](https://img.shields.io/bower/v/editor.md.svg)
 
 -------------
 ###Blockquotes
@@ -97,21 +96,21 @@ Práctica de Curso Profesional de Git y GitHub
 | `git commit -am "[commit message]"` | Add files from stagging area to repository and commit | Añande los cambios del stagging area al repositorio y hace commit |
 | `git commit --amend "[commit message]"` | Add changed files at the earlier commit | Añade los cambios al anterior commit. Si se escribe un mensaje este sobreescribe el anterior.|
 | ​🌏​🌲​🌳​💻​`git rm`|  |  |
-| `git rm -r [archivo]` | Remove a file (or folder) | Elimina archivos o carpetas La diferencia entre esto y simplemente borrar el archivo directamente es que se guarda en git un registro de eliminación. La diferencia entre esto y simplemente borrar el archivo directamente es que se guarda en git un registro de eliminación.|
-| `git rm --cached [archivo]` | Remove a file (or folder) from stagging area to working directory | Elimina archivos o carpetas del área de stagging al directorio de trabajo. a diferencia entre esto y simplemente borrar el archivo directamente es que se guarda en git un registro de eliminación. |
-| `git rm -f ` | Remove a file (or folder) del stagging area and the working directory. The difference between this and simply deleting the file directly is that a delete log is saved to git | Elimina archivos o carpetas del área de stagging y del directorio de trabajo. La diferencia entre esto y simplemente borrar el archivo directamente es que se guarda en git un registro de eliminación. |
-| ​🌏​🌲​🌳​💻​`git reset`|  |  |
-| `git reset -soft [sha1]` | | Borrar todos los commits posteriores a [sha1]. Este comando resetea el HEAD al [sha1] mas no modifica ningún archivo. Quedan en el stagging para un commit posterior |
-| `git reset -soft -mixed [sha1]` | | Borrar todos los commits posteriores a [sha1]. Los archivos que salen del repositorio son pasados al working directory |
-| `git reset -hard [sha1]` | | Elimina todos los cambios incluso del working directory |
-| `git reset -HEAD` | | Saca los archivos del staging area. Este comando no elimina ningún archivo ni borra commits del git |
+| `git rm -r [archivo]` | Remove a file (or folder)... | EElimina archivos o carpetas del área de stagging sin eliminar el historial del sistema de versiones|
+| `git rm --cached [archivo]` |  | Elimina archivos o carpetas del área de stagging y del proximo commit, pero los mantiene en disco duro |
+| `git rm -force ` |  |  Elimina los archivos del git y del disco duro|
+| ​🌏​🌲​🌳​💻​`git reset`|  | Permite volver en el tiempo sin poder volver al futuro |
+| `git reset -soft [sha1]` | | Borrar todos los commits posteriores a [sha1]. Este comando resetea el HEAD al [sha1] mas no modifica ningún archivo. Quedan en el stagging para un commit posterior,  elimina los cambios hasta el staging area --- Se borra el historial pero se mantiene los archivos del area de stagging para poder apolicar cambios al ultimo commit |
+| `git reset -mixed [sha1]` | | Borra toda la información del área de stagging y de los commits |
+| `git reset -hard [sha1]` | | Elimina todos los cambios incluso del working directory  regresa hasta el commit del [SHA-1] Donde el SHA-1 es el identificador del commit --- Borra toda la infromacion del area de stagging y de los commits |
+| `git reset -HEAD` | | Mueve cambios de Stagging a Unstaged. Se conservan los ultimos cambios, el repositorio sigue teniendo el archivo solo con los cambios hechos en commit. Este comando no elimina ningún archivo ni borra commits del git |
 
 ### Branching & Merging / Ramas y Fusionar
 
 | Command | Description | Descripción |
 | ------- | ----------- | ----------- |
 | ​🌏​🌲​🌳​💻​`git branch` |  |  |
-| `git branch ` | List branches (the asterisk denotes the current branch) | Lista todas las ramas |
+| `git branch ` | List branches (the asterisk denotes the current branch) | Lista todas las ramas locales |
 | `git branch [branch name]` | Create a new branch | Crea una nueva rama |
 | `git branch -d [branch name]` | Delete a branch | Elimina una rama |
 | `git branch [nombre]` | Create a new branches | Crear la rama [nombre]|
@@ -129,7 +128,7 @@ Práctica de Curso Profesional de Git y GitHub
 | `git checkout ` |  | Trae cambios realizados |
 | `git checkout -b [branch name]` | Create a new branch and switch to it | Crea una nueva rama y cambia a ella |
 | `git checkout -b [branch name] origin/[branch name]` | Clone a remote branch and switch to it | Clona una rama remota y cambia a ella |
-| `git checkout -b [nombre]` ||Crea un branch y se mueva al mismo|
+| `git checkout -b [branch]` | | Crea una rama y hace checkout directamente |
 | `git checkout [branch name]` | Switch to a branch | Cambiar a una rama determinada |
 | `git checkout -` | Switch to the branch last checked out | Cambia a la ultima rama seleccionada |
 | `git checkout -- [archivo]` | Discard changes to a file | Descarta los cambios de un archivo |
@@ -195,7 +194,7 @@ Práctica de Curso Profesional de Git y GitHub
 | `git log -graph` | See the branches  | Ver las ramificaciones | 
 | `git log [numero]` | See the last [number] commitments | Ver los ultimos [numero] commits |
 | `git log --author="Name Author"` | Shows an author's logs  |  Muestra los logs de un autor |
-| `git log -all --graph --decorate --oneline` | View changes (Max-detailed) | Muestra todos los cambios del repositorio detallada y graficamente |
+| `git log --all --graph --decorate --oneline` | View changes (Max-detailed) | Muestra todos los cambios del repositorio detallada y graficamente |
 | `git relog [numero]` |  Show full git log, including removed branches  | Muestra el log completo de git, incluido ramas eliminados |
 | `gitk` | Open GUI | Abre una interfaz grafica con el historial del repositorio |
 | ​🌏​🌲​🌳​💻​`git diff` |  |  |
@@ -235,6 +234,7 @@ Práctica de Curso Profesional de Git y GitHub
 | `git cherry pick [sha1]`| |mover el commit [sha1] de otro branch al branch actual.|
 
 ### Collaborative Commands / Comandos Colaborativos
+
 | Command | Description | Descripción |
 | ------- | ----------- | ----------- |
 | ​🌏​🌲​🌳​💻​`git shortlog` |  |  |
@@ -247,7 +247,8 @@ Práctica de Curso Profesional de Git y GitHub
 | `git [comando] --help` | |muestra cómo funciona el comando.|
 
 
-## **Repositorios Remotos (Github)**
+## Remote Repositories / Repositorios Remotos (Github)
+
 | Command | Description | Descripción |
 | ------- | ----------- | ----------- |
 | `git clone [ruta]` ||Trae el repositorio a la computadora |
@@ -263,5 +264,9 @@ Práctica de Curso Profesional de Git y GitHub
 | `git push -tags` | |  Enviar los tags|
 | `git push --all origin` | | Push a todos los branch y tags|
 | `rm -f -r ~/Projects/MyProject.git` | | Eliminará un repositorio Git de línea de comandos completo |
+
+## Interesting Links / Enlaces Interesantes (Github)
+https://marklodato.github.io/visual-git-guide/index-es.html
+https://diego.com.es/ramas-y-uniones-en-git
 
 *Comandos para trabajar en Git y GitHub*
