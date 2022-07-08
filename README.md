@@ -46,7 +46,6 @@ A list of commonly used Git and Terminal commands;
 | `clear` | clear the terminal screen | Limpia la Terminal |
 | `Touch [name.txt]` | create a empty file | Crea un archivo vacio |
 | `rm [file]` | remove files | Elimina un archivo |
-| `rm -rf [dir]` | remove directories | Elimina una carpeta |
 | `pwd` | Print name of current/working directory | Muestra el directorio donde nos encontramos |
 | `mv` | move (rename) files | Mueve o renombra archivos |
 | `cat [name.txt]` | Concatenate files and print on the standard output | Vista previa del contenido del archivo |
@@ -54,7 +53,7 @@ A list of commonly used Git and Terminal commands;
 | `history` |  | Ultimos comandos que he ingresado |
 | `Guardar y salir de vi` || Esc pausa y ingresar shif + z + z [para guardar y salir de “vi”] |
 | `Escribir en vi` || Space + i [para poder empezar a escribir en “vi”] |
-| `rm -rf repo.git` | Remove the temporary local repository | | 
+| `rm -rf [repo.git]` | Remove the temporary local repository | Elimina un repositorio local | 
 
 
 ### Config Git / Configuración de Git
