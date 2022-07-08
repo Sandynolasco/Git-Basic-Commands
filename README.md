@@ -39,7 +39,7 @@ A list of commonly used Git and Terminal commands;
 ### Terminal Commands / Comandos de la Terminal
 
 | Command | Description | Descripción |
-| ------- | ----------- | ------------ |
+| ------------------------ | ----------- | ----------- |
 | `cd [rute]` | To change directory | Cambia el directorio |
 | `mkdir [name]` | Make directory | Crea una nueva carpeta |
 | `ls -al` | List information about the files a [hide files]| Lista los archivos del directorio, incluye archivos ocultos |
@@ -59,7 +59,7 @@ A list of commonly used Git and Terminal commands;
 ### Config Git / Configuración de Git
 
 | Command | Description | Descripción |
-| ------- | ----------- | ------------ |
+| ------------------------ | ----------- | ----------- |
 | `git config --global user.name "name-example"` | Add a user name | Añade un nombre de usuario |
 | `git config --global user.email user@example.com` | Add a email for user | Añade un correo del usuario |
 | `git config --list` | List all setings | Muestra todas las configuraciones |
@@ -69,7 +69,7 @@ A list of commonly used Git and Terminal commands;
 ### Config SSH Keys / Configuración de Credenciales SSH
 
 | Command | Description | Descripción |
-| ------- | ----------- | ------------ |
+| ------------------------ | ----------- | ----------- |
 | `ssh-keygen -t rsa -b 4096 -C "Email"` | Generate SSH key | Generar credencial SSH |
 | `eval $(ssh-agent -s)` | Verify ssh agent | Verifica la existencia del servidor de credenciales SSH |
 | `ssh-add [rute]` | Add SSH key to your workspace | Agrega la credencial SSH al entorno de trabajo |
@@ -77,7 +77,7 @@ A list of commonly used Git and Terminal commands;
 ### Creating Projects / Creación de proyectos
 
 | Command | Description | Descripción |
-| ------- | ----------- | ------------ |
+| ------------------------ | ----------- | ----------- |
 | `git init [nombre]` | Initialize a local Git repository and create a carpet| Inicia un repositorio local de Git y crea la carpeta, si se desea eliminar el repositorio, solo hay que eliminar la carpeta oculta .git |
 | `git clone [url]` | Create a local copy of a remote repository | Crea una copia local de un repositorio remoto |
 
@@ -108,7 +108,7 @@ A list of commonly used Git and Terminal commands;
 ### Branching & Merging / Ramas y Fusionar
 
 | Command | Description | Descripción |
-| ------- | ----------- | ----------- |
+| ------------------------ | ----------- | ----------- |
 | ​🌏​🌲​🌳​💻​`git branch` |  |  |
 | `git branch ` | List branches (the asterisk denotes the current branch) | Lista todas las ramas locales |
 | `git branch [branch name]` | Create a new branch | Crea una nueva rama |
@@ -154,7 +154,7 @@ A list of commonly used Git and Terminal commands;
 ### Sharing & Updating Projects / Compartiendo y Repositorios Remotos
 
 | Command | Description | Descripción |
-| ------- | ----------- | ----------- |
+| ------------------------ | ----------- | ----------- |
 | ​🌏​🌲​🌳​💻​`git push` |  |  |
 | `git push origin [branch name]` | Push a branch to your remote repository | Envia el repositorio local a remoto |
 | `git push origin --delete [branch name]` | Delete a remote branch | Elimina un repositorio remoto |
@@ -185,7 +185,7 @@ A list of commonly used Git and Terminal commands;
 ### Inspection & Comparison / Inspeccion y Comparación
 
 | Command | Description | Descripción |
-| ------- | ----------- | ----------- |
+| ------------------------ | ----------- | ----------- |
 | `git log` |  |  |
 | `git log` | View changes | Muestra los cambios en el repositorio |
 | `git log --summary` | View changes (detailed) | Muestra los cambios en el repositorio detalladamente |
@@ -215,7 +215,7 @@ A list of commonly used Git and Terminal commands;
 ### Others / Otros
 
 | Command | Description | Descripción |
-| ------- | ----------- | ----------- |
+| ------------------------ | ----------- | ----------- |
 | `alias [name=] "command"` | Create a shorcut for a command | Crea un alias para llamar a un comando |
 | `git cherry pick [sha1]` | | Mover el commit [sha1] de otro branch al branch actual |
 | `git grep -n [word]` | |Search words in the proyect | Busca la palabra especificada en todo el proyecto |
@@ -236,7 +236,7 @@ A list of commonly used Git and Terminal commands;
 ### Collaborative Commands / Comandos Colaborativos
 
 | Command | Description | Descripción |
-| ------- | ----------- | ----------- |
+| ------------------------ | ----------- | ----------- |
 | ​🌏​🌲​🌳​💻​`git shortlog` |  |  |
 | `git shortlog -sn`| |muestra cuantos commit han hecho cada miembros del equipo.|
 | `git shortlog -sn --all`| |muestra cuantos commit han hecho cada miembros del equipo hasta los que han sido eliminado|
@@ -250,7 +250,7 @@ A list of commonly used Git and Terminal commands;
 ## Remote Repositories / Repositorios Remotos (Github)
 
 | Command | Description | Descripción |
-| ------- | ----------- | ----------- |
+| ------------------------ | ----------- | ----------- |
 | `git clone [ruta]` ||Trae el repositorio a la computadora |
 | `fork` ||Hace una copia de un repositorio externo a nuestra cuenta |
 | `ssh-keygen -t rsa -b 4096 -C "correo@ejemploc.com"` ||Crea una llave  ssh. El correo debe de ser el mismo que se encuentra en Github |
