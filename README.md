@@ -54,6 +54,7 @@ A list of commonly used Git and Terminal commands;
 | `history` |  | Ultimos comandos que he ingresado |
 | `Guardar y salir de vi` || Esc pausa y ingresar shif + z + z [para guardar y salir de “vi”] |
 | `Escribir en vi` || Space + i [para poder empezar a escribir en “vi”] |
+| `rm -rf repo.git` | Remove the temporary local repository | | 
 
 
 ### Config Git / Configuración de Git
@@ -149,7 +150,6 @@ A list of commonly used Git and Terminal commands;
 | `git stash clear` | Remove all stashed entries ||
 | ​🌏​🌲​🌳​💻​ | git clean |  |
 | `git clean` | | Elimina los archivos que no están bajo el control de versión. Para que funcione es necesario usar alguno de los flags: `n` no remueve nada, solo te muestra los archivos que va a eliminar. `f` elimina los archivos que no se encuentran versionados. |
-| `fork` | Copy a external repository | Copa un repositorio externo |
 
 ### Sharing & Updating Projects / Compartiendo y Repositorios Remotos
 
