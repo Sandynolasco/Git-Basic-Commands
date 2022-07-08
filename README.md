@@ -177,7 +177,8 @@ A list of commonly used Git and Terminal commands;
 | `git push [origin] [master]` || Envia al repositorio local al remoto|
 | `git push --all origin` || Push a todos los branch y tags|
 | ​🌏​🌲​🌳​💻​`git clone` |  |  |
-| `git clone [ruta]`     |  | Trae el repositorio a la computadora|
+| `git clone [ruta de sitio html]`     |  | Trae el repositorio a la computadora|
+| `git clone --bare [ruta de sitio html]`|  | Trae el repositorio a la computadora|
 | ​🌏​🌲​🌳​💻​`git fork` |  |  |
 | `fork`    | | Hace una copia de un repositorio externo a nuestra cuenta|
 
