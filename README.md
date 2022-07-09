@@ -244,6 +244,7 @@ A list of commonly used Git and Terminal commands;
 
 | Command |
 | ------------------------ | 
+| Si quieres un mes adicional en tu suscripcion, accesa aquí: https://platzi.com/r/sandynolasco |
 | https://marklodato.github.io/visual-git-guide/index-es.html |
 | https://diego.com.es/ramas-y-uniones-en-git |
 | https://git-scm.com/docs/git-push |
@@ -277,5 +278,6 @@ Otros:
 git remote add origin git@github.com:Sandynolasco/Git-Basic-Commands.git
 git push --mirror https://github.com/Sandynolasco/Git-Basic-Commands.git
 git push -f origin master:main : Which master is my local branch and main is my remote branch. I think this happened because Github renamed master to main.
+
 
 *Comandos para trabajar en Git y GitHub*
