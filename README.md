@@ -264,5 +264,6 @@ Run git checkout -B main before git push -u origin main
 
 $ git remote add origin git@github.com:Sandynolasco/Git-Basic-Commands.git
 $ git push --mirror https://github.com/Sandynolasco/Git-Basic-Commands.git
+$ git push -f origin master:main : Which master is my local branch and main is my remote branch. I think this happened because Github renamed master to main.
 
 *Comandos para trabajar en Git y GitHub*
