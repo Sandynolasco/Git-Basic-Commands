@@ -74,13 +74,18 @@ A list of commonly used Git and Terminal commands;
 | `ssh-keygen -t rsa -b 4096 -C "Email"` | Generate SSH key | Generar credencial SSH |
 | `eval $(ssh-agent -s)` | Verify ssh agent | Verifica la existencia del servidor de credenciales SSH |
 | `ssh-add [rute]` | Add SSH key to your workspace | Agrega la credencial SSH al entorno de trabajo |
+| `ssh-keygen -t rsa -b 4096 -C "correo@ejemploc.com"` | Generate an SSH key. The email must be the same as the one found on Github | Crea una llave SSH. El correo debe de ser el mismo que se encuentra en Github |
 
 ### Creating Projects / Creación de proyectos
 
 | Command | Description | Descripción |
 | ------------------------ | ----------- | ----------- |
 | `git init [nombre]` | Initialize a local Git repository and create a carpet| Inicia un repositorio local de Git y crea la carpeta, si se desea eliminar el repositorio, solo hay que eliminar la carpeta oculta .git |
-| `git clone [url]` | Create a local copy of a remote repository | Crea una copia local de un repositorio remoto |
+| ​🌏​🌲​🌳​💻​`git clone` |  |  |
+| `git clone [ruta de sitio html]` | Bring the remote repository to the computer | Trae el repositorio a la computadora|
+| `git clone --bare [ruta de sitio html]`| Bring the remote repository to the computer | Trae el repositorio remoto a la computadora|
+
+
 
 ### Basic Snapshotting / Snapshooting Básico
 
@@ -130,51 +135,48 @@ A list of commonly used Git and Terminal commands;
 | `git checkout -- [archivo]` | Discard changes to a file | Descarta los cambios de un archivo |
 | `git checkout [sha1]`| |  Ir al momento del tiempo de ese commit |
 | `git chechout [sha1] [archivo]` | |  Ir al momento del tiempo de ese commit de un archivo |específico.|
-| ​🌏​🌲​🌳​💻​`git merge` |  |  |
-| `git merge [branch name]` | Merge a branch into the active branch | Fusiona una rama a la rama activa
+| ​🌏​🌲​🌳​💻​ `git merge` |  |  |
 | `git merge [source branch] [target branch]` | Merge a branch into a target branch | Fusiona una rama a una rama determinada |
 | `git merge [branch]` | Mixed the branch wit actual |mezcla el branch [branch] con el branch actual
-| ​🌏​🌲​🌳​💻​ | others |  |
+| ​🌏​🌲​🌳​💻​ others |  |
 | `git rebase [branch]`| | Mezcla el [branch] con el branch actual. Es como el merge pero sin crear bifurcaciones. Para que funcione bien, primero se hace rebase a la rama con losCambios que queremos modificar y luego rebase a la rama final  |
-| `git stash` | Stash changes in a dirty working directory | Es un limbo como el staging area. Te permite cambiar de branch sin hacer commit. |
-| `git stash list` | See stash list | Ver la lista de los stash |
-| `git stash pop` | Aplica el ultimo stash a la rama actual.
-| `git stash branch [brach]` | Mueve el stash al [branch]
-| `git stash drop stash@{numero}` | Elimina el stash.
-| `git stash apply stash@{numero}` | Aplica el stash.
-| `git stash clear` | Remove all stashed entries ||
-| ​🌏​🌲​🌳​💻​ | git clean |  |
+| ​🌏​🌲​🌳​💻​ `git clean` |  |
 | `git clean`| | Elimina los archivos que no están bajo el control de versión. Para que funcione es necesario usar alguno de los flags:|
 | `git clean n`| | No remueve nada, solo te muestra los archivos que va a eliminar.|
 | `git clean f`| | Elimina los archivos que no se encuentran versionados.
 
 ### Sharing & Updating Projects / Compartiendo y Repositorios Remotos
 
+
+## Remote Repositories / Repositorios Remotos (Github)
+
 | Command | Description | Descripción |
 | ------------------------ | ----------- | ----------- |
+| ​🌏​🌲​🌳​💻​`git fork` |  |  |
+| `fork` ||Hace una copia de un repositorio externo a nuestra cuenta |
+| ​🌏​🌲​🌳​💻​`git remote` |  |  |
+| `git remote add origin ssh://git@github.com/[username]/[repository-name].git` | Add a remote repository | Conecta un repositorio remoto con uno local. Por defecto el nombre es origin |
+| `git remote -v` | List remote connections | Lista las conexiones remotas |
+| `git remote set-url [branch name] [url]` | Change the url | Cambia la url del repositorio |
+| `git remote add [nombre] [ruta]` | Connect a remote repository with a local one. By default the name is origin | Conecta un repositorio remoto con uno local. Por defecto el nombre es origin |
+| `git remote remove [nombre]` | Remove remote conexion | Remueve una conexión remota |
 | ​🌏​🌲​🌳​💻​`git push` |  |  |
 | `git push origin [branch name]` | Push a branch to your remote repository | Envia el repositorio local a remoto |
 | `git push origin --delete [branch name]` | Delete a remote branch | Elimina un repositorio remoto |
 | `git push --tags` | Push tags to your repository | Envia los tags al repositorio remoto |
 | `git push origin :refs/tags/[name]` | Delete a tag from GitHub | Elimina un tag dentro de GitHub |
-| ​🌏​🌲​🌳​💻​`git pull` |  |  |
-| `git pull` | Update local repository to the newest commit |
-| `git pull origin [branch name]` | Pull changes from remote repository | Hace un feth y fusiona |
-| ​🌏​🌲​🌳​💻​`git remote` |  |  |
-| `git remote add origin ssh://git@github.com/[username]/[repository-name].git` | Add a remote repository | Conecta un repositorio remoto con uno local. Por defecto el nombre es origin |
-| `git remote -v` | List remote connections | Lista las conexiones remotas |
-| `git remote set-url [branch name] [url]` | Change the url | Cambia la url del repositorio |
-| `git remote remove [nombre]` | Remove remote conexion| Remueve una conexión remota|
+| `git push --set-upstream origin main` | Push to GitHub | Sube a GitHub |
+| `git push [origin] [master]` | | Envia al repositorio local al remoto
+| `git push --all origin` | | Push a todos los branch y tags|
+| `git push --u rama main` | | Push a todos los branch |
+| `git push --mirror [url]` | This will get all the branches and tags that are available in the upstream repository and will replicate those into the new location. Warning: Don’t use git push --mirror in repositories that weren’t cloned by --mirror as well. It’ll overwrite the remote repository with your local references (and your local branches). This is not what we want. Read the next section to discover what to do in these cases. Also git clone --mirror is preferred over git clone --bare because the former also clones git notes and some other attributes |  |
 | ​🌏​🌲​🌳​💻​`git fetch` |  |  |
 | `git fetch [nombre] [branch]` | | Solo los trae pero no lo mezcla|
 | ​🌏​🌲​🌳​💻​`git merge` |  |  |
 | `git merge [origin/master] --allow-unrelated-histories` | |Hace un merge del fetch con el repositorio local|
 | ​🌏​🌲​🌳​💻​`git pull` |  |  |
-| `git pull [origin] [master]` | | Envia el repositorio local al remoto|
+| `git pull [origin] [master]` | | Hace un feth y fusiona, hace git fetch + git merge, me trae lo que haya en la web, envia el repositorio local al remoto|
 | `git pull --all origin` || Push a todos los branch y tags|
-| ​🌏​🌲​🌳​💻​`git clone` |  |  |
-| `git clone [ruta de sitio html]`     |  | Trae el repositorio a la computadora|
-| `git clone --bare [ruta de sitio html]`|  | Trae el repositorio a la computadora|
 | ​🌏​🌲​🌳​💻​`git fork` |  |  |
 | `fork` | | Hace una copia de un repositorio externo a nuestra cuenta |
 
@@ -205,25 +207,8 @@ A list of commonly used Git and Terminal commands;
 | `git tag -d [tag]` | Delete a tag | Elimina un tag en especifico |
 | `git tag -f -a [nuevo tag] [sha1 del commit]` | Rename sdasdasdasd | Renombra el tag del commit pero deja el anterior tag.  |
 | ​🌏​🌲​🌳​💻​`git show` |  |  |
-| `git show` | Shows the latest changes that have been made to the commit | Muestra los últimos cambios que se han hecho en el commit |
 | `git show-ref --tags` | List all tags | Lista los tags existentes |
-
-
-### Others / Otros
-
-| Command | Description | Descripción |
-| ------------------------ | ----------- | ----------- |
-| `alias [name=] "command"` | Create a shorcut for a command | Crea un alias para llamar a un comando |
-| `git grep -n [word]` | |Search words in the proyect | Busca la palabra especificada en todo el proyecto |
-| ​🌏​🌲​🌳​💻​`git stash` |  |  |
-| `git stash` | | Es un limbo como el staging area. Te permite cambiar de branch sin hacer commit.|
-| `git stash list`| | Ver la lista de los stash.|
-| `git stash pop`| | Aplica el ultimo stash a la rama actual.|
-| `git stash branch [brach]`| | Mueve el stash al [branch]|
-| `git stash drop stash@{numero}`| | Elimina el stash.|
-| `git stash apply stash@{numero}`| | Aplica el stash.|
-| ​🌏​🌲​🌳​💻​`git cherry` |  |  |
-| `git cherry pick [sha1]` | Move commit from another branch to active branch | Mover el commit [sha1] de otro branch al branch actual |
+| `git show` | Shows the latest changes that have been made to the commit | Muestra los últimos cambios que se han hecho en el commit |
 
 ### Collaborative Commands / Comandos Colaborativos
 
@@ -238,23 +223,22 @@ A list of commonly used Git and Terminal commands;
 | `git blame [archivo] -L[linea_inicial],[linea_final]`| | Muestra quién hizo cada cosa linea por línea indicándole desde qué linea ver. Ejemplo `L35,50|`
 | `git [comando] --help` | Shows how functions the command | Muestra cómo funciona el comando.|
 
-
-## Remote Repositories / Repositorios Remotos (Github)
+### Others / Otros
 
 | Command | Description | Descripción |
 | ------------------------ | ----------- | ----------- |
-| `git clone [ruta]` | Bring the remote repository to the computer | Trae el repositorio remoto a la computadora |
-| `fork` ||Hace una copia de un repositorio externo a nuestra cuenta |
-| `ssh-keygen -t rsa -b 4096 -C "correo@ejemploc.com"` | Create an ssh key. The email must be the same as the one found on Github | Crea una llave  ssh. El correo debe de ser el mismo que se encuentra en Github |
-| `git remote add [nombre] [ruta]` | Connect a remote repository with a local one. By default the name is origin | Conecta un repositorio remoto con uno local. Por defecto el nombre es origin |
-| `git remote -v` | List remote connections |  Lista las conexiones remota |
-| `git remote remove [nombre]` | Remove remote conexion | Remueve una conexión remota |
-| `git fetch [nombre] [branch]` | | Solo trae pero no lo mezcla |
-| `git merge [origin/master] --allow-unrelated-histories` | | Hace un merge del fetch con el repositorio local |
-| `git pull [origin] [branch]` | | Hace git fetch + git merge, me trae lo que haya en la web |
-| `git push [origin] [master]` | | Envia al repositorio local al remoto
-| `git push --all origin` | | Push a todos los branch y tags|
-| `git push --u rama main` | | Push a todos los branch |
+| `alias [name=] "command"` | Create a shorcut for a command | Crea un alias para llamar a un comando |
+| `git grep -n [word]` | |Search words in the proyect | Busca la palabra especificada en todo el proyecto |
+| ​🌏​🌲​🌳​💻​`git stash` |  |  |
+| `git stash` | Stash changes in a dirty working directory | Es un limbo como el staging area. Te permite cambiar de branch sin hacer commit. |
+| `git stash list`| | Ver la lista de los stash.|
+| `git stash pop`| | Aplica el ultimo stash a la rama actual.|
+| `git stash branch [brach]`| | Mueve el stash al [branch]|
+| `git stash drop stash@{numero}`| | Elimina el stash.|
+| `git stash apply stash@{numero}`| | Aplica el stash.|
+| `git stash clear` | Remove all stashed entries ||
+| ​🌏​🌲​🌳​💻​`git cherry` |  |  |
+| `git cherry pick [sha1]` | Move commit from another branch to active branch | Mover el commit [sha1] de otro branch al branch actual |
 
 ## Interesting Links / Enlaces Interesantes (Github)
 https://marklodato.github.io/visual-git-guide/index-es.html
@@ -277,4 +261,8 @@ Run git push -u origin master instead of git push -u origin main
 
 Or Solution B - if you want to name the branch main
 Run git checkout -B main before git push -u origin main
+
+$ git remote add origin git@github.com:Sandynolasco/Git-Basic-Commands.git
+$ git push --mirror https://github.com/Sandynolasco/Git-Basic-Commands.git
+
 *Comandos para trabajar en Git y GitHub*
