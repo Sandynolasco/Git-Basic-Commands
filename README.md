@@ -2,14 +2,14 @@
 Práctica de Curso Profesional de Git y GitHub
 
 
-# Editor.md
+# Let's begin
 
-![](https://pandao.github.io/editor.md/images/logos/editormd-logo-180x180.png)
+![Begin](https://user-images.githubusercontent.com/58926113/178091091-a7eecc5a-fcc4-422b-9fc9-611fc7e52382.gif)
 
 ![](https://sandynolasco.github.io/Sandynolasco/imgall/blob/main/Begin.gif)
 
-![](https://img.shields.io/github/stars/pandao/editor.md.svg) ![](https://img.shields.io/github/release/pandao/editor.md.svg) ![](https://img.shields.io/github/issues/pandao/editor.md.svg) ![](https://img.shields.io/bower/v/editor.md.svg)
-![](https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2FSandynolasco%2Fimgall%2Fblob%2Fmain%2FBegin.gif)
+![](https://img.shields.io/github/issues/Sandynolasco/Git-Basic-Commands) ![](https://img.shields.io/github/forks/Sandynolasco/Git-Basic-Commands) ![](https://img.shields.io/github/stars/Sandynolasco/Git-Basic-Commands)
+
 
 
 
@@ -24,12 +24,12 @@ A list of commonly used Git and Terminal commands;
 - Creating Projects / Creación de proyectos
 - Basic Snapshotting / Snapshooting Básico
 - Branching & Merging / Ramas y Fusionar
-- Sharing & Updating Projects / Compartiendo y Repositorios Remotos
+- Sharing & Updating Projects of Remote Repositories / Compartir y - actualizar proyectos de repositorios remotos (Github)
 - Inspection & Comparison / Inspeccion y Comparación
-- Others / Otros
 - Collaborative Commands / Comandos Colaborativos
-- Repositorios Remotos (Github)
-- Interesting Links / Enlaces Interesantes (Github)
+- Others / Otros
+- Interesting Links / Enlaces Interesantes
+- Errors / Errores (Github)
 
 
 -------------
@@ -240,7 +240,7 @@ A list of commonly used Git and Terminal commands;
 | ​🌏​🌲​🌳​💻​`git cherry` |  |  |
 | `git cherry pick [sha1]` | Move commit from another branch to active branch | Mover el commit [sha1] de otro branch al branch actual |
 
-## Interesting Links / Enlaces Interesantes (Github)
+## Interesting Links / Enlaces Interesantes
 
 | Command |
 | ------------------------ | 
@@ -249,6 +249,9 @@ A list of commonly used Git and Terminal commands;
 | https://git-scm.com/docs/git-push |
 | https://sourcelevel.io/blog/how-to-properly-mirror-a-git-repository |
 | http://rogerdudler.github.io/git-guide/index.es.html |
+| https://pandao.github.io/editor.md/en.html#Features |
+| https://git-scm.com/ |
+
 
 ## Errors / Errores (Github)
 
