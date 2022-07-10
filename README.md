@@ -33,7 +33,7 @@ A list of commonly used Git and Terminal commands;
 
 
 -------------
-###Quotes
+### Quotes
 
 > "Today is still, yesterday never again"
 
@@ -65,7 +65,7 @@ A list of commonly used Git and Terminal commands;
 | ------------------------ | ----------- | ----------- |
 | `git config --global user.name "name-example"` | Add a user name | Añade un nombre de usuario |
 | `git config --global user.email user@example.com` | Add a email for user | Añade un correo del usuario |
-| `git config --list` | List all setings | Muestra todas las configuraciones |
+| `git config --list` | List all setings | Muestra todas las configuraciones  |
 | `git config --global color.ui true` | Configure text editor | Configurar el editor del texto |
 
 
@@ -93,7 +93,7 @@ A list of commonly used Git and Terminal commands;
 
 | Command | Description | Descripción |
 | ------------------------ | ----------- | ----------- |
-| `git status` | Check status repository | Verifica el estatus del repositorio. `untracked files` son archivos que están en nuestro Working Directory, lo que aparezca en rojo es lo que se ha modificado y hay que pasarlo al Staging. `changes to be comitted` son los archivos que se encuentran en el staging area, aparecen en verde |
+| `git status` | Check status repository | Verifica el estatus del repositorio. `untracked files` son archivos que están en nuestro Working Directory, lo que aparezca en rojo es lo que se ha modificado y hay que pasarlo al Staging. `changes to be comitted` son los archivos que se encuentran en el staging area, aparecen en verde. Se puede ver el tipo de rama: on branch master, commits, rastreo o procesamiento de filas:untracked files |
 | ​🌏​🌲​🌳​💻​`git add`|  |  |
 | `git add [Name file]` | Add a file to the staging area | Añade un archivo al area de preparación |
 | `git add .` | Add all new and changed files to the staging area | Añade todos los archivos al area de preparación |
@@ -101,8 +101,9 @@ A list of commonly used Git and Terminal commands;
 | `git add - n [Name file]` | Simulating add a file | Simula el agregado de un [archivo] |
 | ​🌏​🌲​🌳​💻​`git commit`|  |  |
 | `git commit -m "[commit message]"` | Add changes from stagging area to repository | Añade los archivos del área de stagging al repositorio |
+| `git commit -a "[commit message]"` | The command to automatically stage files that have been modified and deleted, but new files you have not told Git about are not affected | El comando para organizar automáticamente los archivos que se han modificado y eliminado, pero los archivos nuevos que no le has dicho a Git no se ven afectados |
 | `git commit -am "[commit message]"` | Add files from stagging area to repository and commit | Añande los cambios del stagging area al repositorio y hace commit |
-| `git commit --amend "[commit message]"` | Add changed files at the earlier commit | Añade los cambios al anterior commit. Si se escribe un mensaje este sobreescribe el anterior.|
+| `git commit -- amend "[commit message]"` | Add changed files at the earlier commit | Añade los cambios al anterior commit. Si se escribe un mensaje este sobreescribe el anterior.|
 | ​🌏​🌲​🌳​💻​`git rm`|  |  |
 | `git rm -r [Name file]` | Remove a file (or folder)... | Elimina archivos o carpetas del área de stagging sin eliminar el historial del sistema de versiones|
 | `git rm --cached [Name file]` |  | Elimina archivos o carpetas del área de stagging y del proximo commit, pero los mantiene en disco duro |
@@ -206,7 +207,7 @@ A list of commonly used Git and Terminal commands;
 | `git tag -f -a [nuevo tag] [sha1 del commit]` | Rename sdasdasdasd | Renombra el tag del commit pero deja el anterior tag.  |
 | ​🌏​🌲​🌳​💻​`git show` |  |  |
 | `git show-ref --tags` | List all tags | Lista los tags existentes |
-| `git show` | Shows the latest changes that have been made to the commit | Muestra los últimos cambios que se han hecho en el commit |
+| `git show [tag]` | Shows the latest changes that have been made to the commit | Muestra los últimos cambios que se han hecho en el commit |
 
 
 ### Collaborative Commands / Comandos Colaborativos
@@ -245,6 +246,7 @@ A list of commonly used Git and Terminal commands;
 | Command |
 | ------------------------ | 
 | Si quieres un mes adicional en tu suscripcion DE PLATZI, accesa aquí: https://platzi.com/r/sandynolasco |
+| https://www.w3docs.com/learn-git/git-commit-amend.html |
 | https://marklodato.github.io/visual-git-guide/index-es.html |
 | https://diego.com.es/ramas-y-uniones-en-git |
 | https://sourcelevel.io/blog/how-to-properly-mirror-a-git-repository |
