@@ -8,9 +8,8 @@ Práctica de Curso Profesional de Git y GitHub
 
 ![](https://sandynolasco.github.io/Sandynolasco/imgall/blob/main/Begin.gif)
 
-![](https://img.shields.io/github/issues/Sandynolasco/Git-Basic-Commands) ![](https://img.shields.io/github/forks/Sandynolasco/Git-Basic-Commands) ![](https://img.shields.io/github/stars/Sandynolasco/Git-Basic-Commands)
-
-
+![](https://img.shields.io/github/issues/Sandynolasco/Git-Basic-Commands) ![](https://img.shields.io/github/forks/Sandynolasco/Git-Basic-Commands) ![](https://img.shields.io/github/stars/Sandynolasco/Git-Basic-Commands) 
+![](https://github.com/Sandynolasco/Git-Basic-Commands/issues/2#issue-1301125192)
 
 
 **Práctica de Curso Profesional de Git y GitHub**
@@ -37,7 +36,7 @@ A list of commonly used Git and Terminal commands;
 
 > "Today is still, yesterday never again"
 
-![](https://github.com/Sandynolasco/Git-Basic-Commands/issues/2#issue-1301125192)
+
 
 ### Terminal Commands / Comandos de la Terminal
 
