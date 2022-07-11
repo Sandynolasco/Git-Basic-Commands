@@ -37,6 +37,7 @@ A list of commonly used Git and Terminal commands;
 
 > "Today is still, yesterday never again"
 
+![](https://github.com/Sandynolasco/Git-Basic-Commands/issues/2#issue-1301125192)
 
 ### Terminal Commands / Comandos de la Terminal
 
@@ -46,13 +47,13 @@ A list of commonly used Git and Terminal commands;
 | `mkdir [carpetname]` | Make directory | Crea una nueva carpeta |
 | `ls -al` | List information about the files a [hide files]| Lista los archivos del directorio, incluye archivos ocultos |
 | `clear` | Clear the terminal screen | Limpia la Terminal |
-| `Touch [Name file]` | Create a empty file | Crea un archivo vacio |
+| `touch [Name file]` | Create a empty file | Crea un archivo vacio |
 | `rm [Name file]` | Remove files | Elimina un archivo |
 | `pwd` | Print name of current/working directory | Muestra el directorio donde nos encontramos |
 | `mv` | Move (rename) files | Mueve o renombra archivos |
 | `cat [Name file]` | Concatenate files and print on the standard output | Vista previa del contenido del archivo |
 | `sudo` | Execute a command as another user | Ejecuta un commando como administrador |
-| `history` |  | Ultimos comandos que he ingresado |
+| `history` |  Last commands entered| Ultimos comandos ingresados |
 | `Guardar y salir de vi` || Esc pausa y ingresar shif + z + z [para guardar y salir de “vi”] |
 | `Escribir en vi` || Space + i [para poder empezar a escribir en “vi”] |
 | `rm -rf [repo.git]` | Remove the temporary local repository | Elimina un repositorio local ó |
@@ -103,16 +104,16 @@ A list of commonly used Git and Terminal commands;
 | `git commit -m "[commit message]"` | Add changes from stagging area to repository | Añade los archivos del área de stagging al repositorio |
 | `git commit -a "[commit message]"` | The command to automatically stage files that have been modified and deleted, but new files you have not told Git about are not affected | El comando para organizar automáticamente los archivos que se han modificado y eliminado, pero los archivos nuevos que no le has dicho a Git no se ven afectados |
 | `git commit -am "[commit message]"` | Add files from stagging area to repository and commit | Añande los cambios del stagging area al repositorio y hace commit |
-| `git commit -- amend "[commit message]"` | Add changed files at the earlier commit | Añade los cambios al anterior commit. Si se escribe un mensaje este sobreescribe el anterior.|
+| `git commit -- amend --no-edit "[commit message]"` | Add changed files at the earlier commit, you have modified some files that you want to commit in a singular snapshot, but you have forgotten to add one of the files the first time around, Add --no-edit flag to modify your commit without changing the commit message. As a result, the wrong commit will be replaced by the right one | Añade los cambios al anterior commit. Si se escribe un mensaje este sobreescribe el anterior.|
 | ​🌏​🌲​🌳​💻​`git rm`|  |  |
 | `git rm -r [Name file]` | Remove a file (or folder)... | Elimina archivos o carpetas del área de stagging sin eliminar el historial del sistema de versiones|
-| `git rm --cached [Name file]` |  | Elimina archivos o carpetas del área de stagging y del proximo commit, pero los mantiene en disco duro |
-| `git rm -force ` |  |  Elimina los archivos del git y del disco duro |
-| ​🌏​🌲​🌳​💻​`git reset`|  | Permite volver en el tiempo sin poder volver al futuro |
-| `git reset -soft [sha1]` | | Borrar todos los commits posteriores a [sha1]. Este comando resetea el HEAD al [sha1] mas no modifica ningún archivo. Quedan en el stagging para un commit posterior,  elimina los cambios hasta el staging area --- Se borra el historial pero se mantiene los archivos del area de stagging para poder apolicar cambios al ultimo commit |
-| `git reset -mixed [sha1]` | | Borra toda la información del área de stagging y de los commits |
-| `git reset -hard [sha1]` | | Elimina todos los cambios incluso del working directory  regresa hasta el commit del [SHA-1] Donde el SHA-1 es el identificador del commit --- Borra toda la infromacion del area de stagging y de los commits |
-| `git reset -HEAD` | | Mueve cambios de Stagging a Unstaged. Se conservan los ultimos cambios, el repositorio sigue teniendo el archivo solo con los cambios hechos en commit. Este comando no elimina ningún archivo ni borra commits del git |
+| `git rm --cached [Name file]` | Removes files or folders from the staging area and from the next commit, but keeps them on the hard drive | Elimina archivos o carpetas del área de stagging y del proximo commit, pero los mantiene en disco duro |
+| `git rm -force ` | Delete files from git and hard drive |  Elimina los archivos del git y del disco duro |
+| ​🌏​🌲​🌳​💻​`git reset`|  It allows you to go back in time without being able to go back to the future | Permite volver en el tiempo sin poder volver al futuro |
+| `git reset -soft [sha1]` | We delete all Git history and logs but keep any changes we have in Staging, so we can apply the latest updates to a new commit. --- The history is deleted but the files of the stagging area are kept to be able to apply changes to the last commit | Borramos todo el historial y los registros de Git pero guardamos los cambios que tengamos en Staging, así podemos aplicar las últimas actualizaciones a un nuevo commit. --- Se borra el historial pero se mantiene los archivos del area de stagging para poder apolicar cambios al ultimo commit |
+| `git reset -mixed [sha1]` | Delete all the information from the staging area and from the commits | Borra toda la información del área de stagging y de los commits |
+| `git reset -hard [sha1]` | Delete all the changes even from the working directory go back to the commit [SHA-1] Where the SHA-1 is the commit identifier --- Delete all the information from the staging area and from the commits | Elimina todos los cambios incluso del working directory  regresa hasta el commit del [SHA-1] Donde el SHA-1 es el identificador del commit --- Borra toda la infromacion del area de stagging y de los commits |
+| `git reset -HEAD` | Move changes from Stagging to Unstaged. The latest changes are kept, the repository still has the file only with the changes made in commit. This command does not remove any files or delete commits from git. In short: This is the command to get files out of the staging area. Not to delete them or anything, just so that the latest changes to these files don't get pushed to the last commit, unless we change our mind and staging them back with git add of course | Mueve cambios de Stagging a Unstaged. Se conservan los ultimos cambios, el repositorio sigue teniendo el archivo solo con los cambios hechos en commit. Este comando no elimina ningún archivo ni borra commits del git. En resumen: Este es el comando para sacar archivos del área de staging. No para borrarlos ni nada de eso, solo para que los últimos cambios de estos archivos no se envíen al último commit, a menos que cambiemos de opinión y los incluyamos de nuevo en staging con git add, por supuesto |
 
 
 ### Branching & Merging / Ramas y Fusionar
@@ -123,11 +124,11 @@ A list of commonly used Git and Terminal commands;
 | `git branch ` | List branches (the asterisk denotes the current branch) | Lista todas las ramas locales |
 | `git branch [branch name]` | Create a new branch | Crea una nueva rama [branch name] |
 | `git branch -l`| List all branches| lista las ramas |
-| `git branch -r` | | Muestra todas las ramas remotas |
-| `git branch -a` | | Muestra todas las ramas tanto locales como remotas |
+| `git branch -r` | Show all remote branches | Muestra todas las ramas remotas |
+| `git branch -a` | Show all branches both local and remote | Muestra todas las ramas tanto locales como remotas |
 | `git branch -d [branch name]`| Delete a branch| Elimina el branch [nombre]. Esto solo funciona si el branch no tiene ningún commit |
-| `git branch -D [branch name]`|| Fuerza la eliminación de una rama sin importar si tiene commits |
-| `git branch -m [branch name inicial] [branch name nuevo]` | | Renombra el branch [nombre inicial] por [nuevo nombre] |
+| `git branch -D [branch name]`| Force deletion of a branch regardless of whether it has commits | Fuerza la eliminación de una rama sin importar si tiene commits |
+| `git branch -m [branch name inicial] [branch name nuevo]` | Rename branch [initial name] to [new name] | Renombra el branch [nombre inicial] por [nuevo nombre] |
 | ​🌏​🌲​🌳​💻​`git show` |  |  |
 | `git show-branch --all` | List all branches local | Lista todas las ramas en local |
 | ​🌏​🌲​🌳​💻​`git checkout` |  |  |
@@ -136,17 +137,18 @@ A list of commonly used Git and Terminal commands;
 | `git checkout -b [branch name] origin/[branch name]` | Clone a remote branch and switch to it | Clona una rama remota y cambia a ella |
 | `git checkout -b [branch name]` | Create a new branch and switch to it | Crea una rama y hace checkout y cambia a ella directamente |
 | `git checkout -- [Name file]` | Discard changes to a file | Descarta los cambios de un archivo |
-| `git checkout [sha1]`| |  Ir al momento del tiempo de ese commit |
-| `git chechout [sha1] [archivo]` | |  Ir al momento del tiempo de ese commit de un archivo específico |
+| `git checkout [sha1]`| Go to the point in time of that commit without deleting subsequent changes to the selected tag |  Ir al momento del tiempo de ese commit sin borrar los cambios posteriores al tag seleccionado |
+| `git chechout [sha1] [archivo]` | Go to the moment in time of that commit of a specific file |  Ir al momento del tiempo de ese commit de un archivo específico |
 | ​🌏​🌲​🌳​💻​ `git merge` |  |  |
 | `git merge [source branch] [target branch]` | Merge a branch into a target branch | Fusiona una rama a una rama determinada |
-| `git merge [branch name]` | Mixed the branch wit actual |mezcla el branch [branch] con el branch actual |
+| `git merge [branch 
+name]` | Mixed the branch wit actual |mezcla el branch [branch] con el branch actual |
 | ​🌏​🌲​🌳​💻​ others |  |
-| `git rebase [branch name]`| | Mezcla el [branch] con el branch actual. Es como el merge pero sin crear bifurcaciones. Para que funcione bien, primero se hace rebase a la rama con losCambios que queremos modificar y luego rebase a la rama final  |
+| `git rebase [branch name]`| Merge the [branch] with the current branch. It's like merge but without creating forks. To make it work well, first rebase the branch with the Changes we want to modify and then rebase the final branch, write the history of the repository, change the history of where the branch started and should only be used locally. | Mezcla el [branch] con el branch actual. Es como el merge pero sin crear bifurcaciones. Para que funcione bien, primero se hace rebase a la rama con losCambios que queremos modificar y luego rebase a la rama final , eescribe la historia del repositorio, cambia la historia de donde comenzó la rama y solo debe ser usado de manera local. |
 | ​🌏​🌲​🌳​💻​ `git clean` |  |
-| `git clean`| | Elimina los archivos que no están bajo el control de versión. Para que funcione es necesario usar alguno de los flags:|
-| `git clean n`| | No remueve nada, solo te muestra los archivos que va a eliminar |
-| `git clean f`| | Elimina los archivos que no se encuentran versionados |
+| `git clean`| Delete files that are not under version control. For it to work you need to use one of the flags: | Elimina los archivos que no están bajo el control de versión. Para que funcione es necesario usar alguno de los flags:|
+| `git clean n`| It does not remove anything, it only shows you the files that it is going to delete | No remueve nada, solo te muestra los archivos que va a eliminar |
+| `git clean f`| Delete the files that are not versioned | Elimina los archivos que no se encuentran versionados |
 
 
 ### Sharing & Updating Projects of Remote Repositories / Compartir y actualizar proyectos de repositorios remotos (Github)
@@ -167,17 +169,17 @@ A list of commonly used Git and Terminal commands;
 | `git push --tags` | Push tags to your repository | Envia los tags al repositorio remoto |
 | `git push origin :refs/tags/[name]` | Delete a tag from GitHub | Elimina un tag dentro de GitHub |
 | `git push --set-upstream origin main` | Push to GitHub | Sube a GitHub |
-| `git push [origin] [master]` | | Envia al repositorio local al remoto
-| `git push --all origin` | | Push a todos los branch y tags |
-| `git push --u rama main` | | Push a todos los branch |
+| `git push [origin] [master]` | Push to local repository to remote | Envia al repositorio local al remoto |
+| `git push --all origin` | Push to all branches and tags | Push a todos los branch y tags |
+| `git push --u rama main` | Push to all branches | Push a todos los branch |
 | `git push --mirror [url]` | This will get all the branches and tags that are available in the upstream repository and will replicate those into the new location. Warning: Don’t use git push --mirror in repositories that weren’t cloned by --mirror as well. It’ll overwrite the remote repository with your local references (and your local branches). This is not what we want. Read the next section to discover what to do in these cases. Also git clone --mirror is preferred over git clone --bare because the former also clones git notes and some other attributes |  |
 | ​🌏​🌲​🌳​💻​`git fetch` |  |  |
-| `git fetch [nombre] [branch name]` | | Solo los trae pero no lo mezcla |
+| `git fetch [nombre] [branch name]` | He only brings them but he doesn't mix it | Solo los trae pero no lo mezcla |
 | ​🌏​🌲​🌳​💻​`git merge` |  |  |
-| `git merge [origin/master] --allow-unrelated-histories` | | Hace un merge del fetch con el repositorio local |
+| `git merge [origin/master] --allow-unrelated-histories` | Merge the fetch with the local repository, fetch the version from the remote repository, and merge to create a commit with the files from both parties | Hace un merge del fetch con el repositorio local, traer la versión del repositorio remoto y hacer merge para crear un commit con los archivos de ambas partes |
 | ​🌏​🌲​🌳​💻​`git pull` |  |  |
-| `git pull [origin] [master]` | | Hace un feth y fusiona, hace git fetch + git merge, me trae lo que haya en la web, envia el repositorio local al remoto |
-| `git pull --all origin` || Push a todos los branch y tags |
+| `git pull [origin] [master]` | Do a feth and merge, do git fetch + git merge, fetch whatever is on the web, push local repository to remote | Hace un feth y fusiona, hace git fetch + git merge, me trae lo que haya en la web, envia el repositorio local al remoto |
+| `git pull --all origin` | Push to all branches and tags | Push a todos los branch y tags |
 
 
 ### Inspection & Comparison / Inspeccion y Comparación
@@ -215,31 +217,32 @@ A list of commonly used Git and Terminal commands;
 | Command | Description | Descripción |
 | ------------------------ | ----------- | ----------- |
 | ​🌏​🌲​🌳​💻​`git shortlog` |  |  |
-| `git shortlog -sn`| | Muestra cuantos commit han hecho cada miembros del equipo |
-| `git shortlog -sn --all`| | Muestra cuantos commit han hecho cada miembros del equipo hasta los que han sido eliminado |
-| `git shortlog -sn --all --no-merge`| | Muestra cuantos commit han hecho cada miembros quitando los eliminados sin los merges |
+| `git shortlog -sn`| Shows how many commits each team member has made | Muestra cuantos commit han hecho cada miembros del equipo |
+| `git shortlog -sn --all`| Shows how many commits each team member has made up to those that have been removed | Muestra cuantos commit han hecho cada miembros del equipo hasta los que han sido eliminado |
+| `git shortlog -sn --all --no-merge`| Shows how many commits each member has made removing the deleted ones without the merges | Muestra cuantos commit han hecho cada miembros quitando los eliminados sin los merges |
 | ​🌏​🌲​🌳​💻​`git blame` |  |  |
-| `git blame [archivo]`|  | Muestra quien hizo cada cosa línea por línea |
-| `git blame [archivo] -L[línea_inicial],[línea_final]`| | Muestra quién hizo cada cosa línea por línea indicándole desde qué línea ver. Ejemplo `L35,50|`
+| `git blame [archivo]`|  Show who did what line by line | Muestra quien hizo cada cosa línea por línea |
+| `git blame [archivo] -L[línea_inicial],[línea_final]`| It shows who did what line by line by telling you which line to watch from. Example `L35.50|` | Muestra quién hizo cada cosa línea por línea indicándole desde qué línea ver. Ejemplo `L35,50|`
 | `git [comando] --help` | Shows how functions the command | Muestra cómo funciona el comando |
-
 
 ### Others / Otros
 
 | Command | Description | Descripción |
 | ------------------------ | ----------- | ----------- |
 | `alias [name=] "command"` | Create a shorcut for a command | Crea un alias para llamar a un comando |
-| `git grep -n [word]` | |Search words in the proyect | Busca la palabra especificada en todo el proyecto |
+| `git grep -n [word]` | Search words in the proyect | Busca la palabra especificada en todo el proyecto |  |
+| `git reflog` | Git saves all the changes even if you decide to delete them, when you delete a change what you are doing is only updating the tip of the branch, to manage these tips there is a mechanism called reference records or reflogs | Git guarda todos los cambios aunque decidas borrarlos, al borrar un cambio lo que estás haciendo sólo es actualizar la punta del branch, para gestionar éstas puntas existe un mecanismo llamado registros de referencia o reflogs |
 | ​🌏​🌲​🌳​💻​`git stash` |  |  |
 | `git stash` | Stash changes in a dirty working directory | Es un limbo como el staging area. Te permite cambiar de branch sin hacer commit |
-| `git stash list`| | Ver la lista de los stash |
-| `git stash pop`| | Aplica el ultimo stash a la rama actual |
-| `git stash branch [brach]`| | Mueve el stash al [branch]|
-| `git stash drop stash@{numero}`| | Elimina el stash |
-| `git stash apply stash@{numero}`| | Aplica el stash |
-| `git stash clear` | Remove all stashed entries ||
+| `git stash list`| See the list of stash | Ver la lista de los stash |
+| `git stash pop`| Apply the latest stash to the current branch | Aplica el ultimo stash a la rama actual |
+| `git stash branch [brach]`| Move the stash to the [branch] | Mueve el stash al [branch] |
+| `git stash drop stash@{numero}`| Remove the stash | Elimina el stash |
+| `git stash apply stash@{numero}`| Apply the stash | Aplica el stash |
+| `git stash clear` | Remove all stashed entries | Remove all stashed entries |
 | ​🌏​🌲​🌳​💻​`git cherry` |  |  |
-| `git cherry pick [sha1]` | Move commit from another branch to active branch | Mover el commit [sha1] de otro branch al branch actual |
+| `git cherry pick [sha1]` | Move commit from another branch to active branch | Mover el commit [sha1] de otro branch al branch actual, Es un comando que permite tomar uno o varios commits de otra rama sin tener que hacer un merge completo |
+
 
 ## Interesting Links / Enlaces Interesantes
 
@@ -255,7 +258,7 @@ A list of commonly used Git and Terminal commands;
 | https://git-scm.com/ |
 | https://platzi.com/cursos/git-github/ |
 | Apuntes a detalle del curso de Platzi: https://wise-diagram-6de.notion.site/Curso-Profesional-de-Git-y-GitHub-c693f9c2bc2345eab096c0bc23001d01 |
-
+| https://learngitbranching.js.org/?NODEMO=&locale=es_ES |
 
 ## Errors / Errores (Github)
 
