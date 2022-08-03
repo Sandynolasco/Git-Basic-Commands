@@ -77,10 +77,7 @@ A list of commonly used Git and Terminal commands;
 | `eval $(ssh-agent -s)` | Verify ssh agent | Verifica la existencia del servidor de credenciales SSH |
 | `ssh-add [rute]` | Add SSH key to your workspace | Agrega la credencial SSH al entorno de trabajo |
 | `ssh-keygen -t rsa -b 4096 -C "correo@ejemploc.com"` | Generate an SSH key. The email must be the same as the one found on Github | Crea una llave SSH. El correo debe de ser el mismo que se encuentra en Github |
-| `ls -al ~/.ssh` | Verifies if SHH key exists | Verifica si hay claves SSH presentes. Comprueba la lista de directorio para ver si ya tiene una clave SSH pública. Predeterminadamente, los nombres de archivo de las llaves públicas compatibles para GitHub son una de las siguientes:
-id_rsa.pub
-id_ecdsa.pub
-id_ed25519.pub |
+| `ls -al ~/.ssh` | Verifies if SHH key exists | Verifica si hay claves SSH presentes. Comprueba la lista de directorio para ver si ya tiene una clave SSH pública. Predeterminadamente, los nombres de archivo de las llaves públicas compatibles para GitHub son una de las siguientes: id_rsa.pub id_ecdsa.pub id_ed25519.pub |
 
 
 
