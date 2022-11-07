@@ -183,6 +183,8 @@ name]` | Mixed the branch wit actual |mezcla el branch [branch] con el branch a
 | ​🌏​🌲​🌳​💻​`git pull` |  |  |
 | `git pull [origin] [master]` | Do a feth and merge, do git fetch + git merge, fetch whatever is on the web, push local repository to remote | Hace un feth y fusiona, hace git fetch + git merge, me trae lo que haya en la web, envia el repositorio local al remoto |
 | `git pull --all origin` | Push to all branches and tags | Push a todos los branch y tags |
+| `git pull origin master --allow-unrelated-histories` |  |  |
+
 
 
 ### Inspection & Comparison / Inspeccion y Comparación
